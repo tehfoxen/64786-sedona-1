@@ -8,99 +8,110 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo.svg" width="102" height="83" alt="Логотип Седона" /> </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav_list site-list">
-          <li class="site-list__item">
-            <a href="photo.html">Фото и Видео</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Форма отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="block__wrapper">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logo.svg" width="102" height="83" alt="Логотип Седона" /> </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav_list site-list">
+            <li class="site-list__item">
+              <a href="photo.html">Фото и Видео</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Форма отзыва</a>
+            </li>
+            <li class="site-list__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="page-main">
     <section class="second-banner">
-      <img class="second-banner__name-banner" src="img/text-index.svg" width="282" height="214" alt="Баннер на главной">
+      <div class="block__wrapper">
+        <img class="second-banner__image" src="img/text-index.svg" width="282" height="214" alt="Баннер на главной">
+      </div>
     </section>
     <section class="photo-header">
-      <h1 class="photo-razdel__photo-header">
-        Фото и видео
-      </h1>
-      <p class="photo-razdel__photo-text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      <div class="block__wrapper">
+        <h1 class="photo-header__main">
+          Фото и видео
+        </h1>
+        <p class="photo-heade__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      </div>
     </section>
-    <section class="photo-gallery">
-      <article class="photo-gallery__photo__item--one">
-        <img class="photo-gallery__image__item--one" src="img/photo-1-mobile.jpg" width="280" height="280" alt="Неродные просторы"
-        />
-        <h2 class="photo-gallery__gallery__title--one">неродные просторы</h2>
-        <p class="photo-gallery__gallery__author--one">Автор фото: Борис</p>
-        <span class="photo-gallery__like__number--one">1350</span>
-      </article>
-      <article class="photo-gallery__photo__item--two">
-        <img class="photo-gallery__image__item--two" src="img/photo-2-mobile.jpg" width="280" height="280" alt="Местная растительность"
-        />
-        <h2 class="photo-gallery__gallery__title--two">Местная растительность</h2>
-        <p class="photo-gallery__gallery__author--two">Автор фото: Сергей</p>
-        <span class="photo-gallery__like__number--two">143</span>
-      </article>
-      <article class="photo-gallery__photo__item--three">
-        <img class="photo-gallery__image__item--three" src="img/photo-3-mobile.jpg" width="280" height="280" alt="Дорога на север"
-        />
-        <h2 class="photo-gallery__gallery__title--three">Дорога на север</h2>
-        <p class="photo-gallery__gallery__author--three">Автор фото: Борис</p>
-        <span class="photo-gallery__like__number--three">96</span>
-      </article>
-      <article class="photo-gallery__photo__item--four">
-        <img class="photo-gallery__image__item--four" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Мост дьявола" />
-        <h2 class="photo-gallery__gallery__title--four">Мост дьявола</h2>
-        <p class="photo-gallery__gallery__author--four">Автор фото: Антон</p>
-        <span class="photo-gallery__like__number--four">96</span>
-      </article>
+    <section class="gallery-photo">
+      <div class="block__wrapper">
+        <article class="gallery  gallery--one">
+          <img class="gallery__image" src="img/photo-1-mobile.jpg" width="280" height="280" alt="Неродные просторы" />
+          <h2 class="gallery__title">неродные просторы</h2>
+          <p class="gallery__author">Автор фото: Борис</p>
+          <span class="gallery__number">1350</span>
+        </article>
+        <article class="gallery  gallery--two">
+          <img class="gallery__image" src="img/photo-2-mobile.jpg" width="280" height="280" alt="Местная растительность" />
+          <h2 class="gallery__title">Местная растительность</h2>
+          <p class="gallery__author">Автор фото: Сергей</p>
+          <span class="gallery__number">143</span>
+        </article>
+        <article class="gallery  gallery--three">
+          <img class="gallery__image" src="img/photo-3-mobile.jpg" width="280" height="280" alt="Дорога на север" />
+          <h2 class="gallery__title">Дорога на север</h2>
+          <p class="gallery__author">Автор фото: Борис</p>
+          <span class="gallery__number">96</span>
+        </article>
+        <article class="gallery  gallery--four">
+          <img class="gallery__image" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Мост дьявола" />
+          <h2 class="gallery__title">Мост дьявола</h2>
+          <p class="gallery__author">Автор фото: Антон</p>
+          <span class="gallery__number">96</span>
+        </article>
+      </div>
     </section>
     <section class="video-block">
-      <div class="video-header">
-<h2 class="video-header__video-title">Все еще сомневаетесь?</h2>
-<p class="video-header__video-text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-</div>
-<div class="video-galary"></div>
+      <div class="block__wrapper">
+        <div class="video-header">
+          <h2 class="video-header__title ">Все еще сомневаетесь?</h2>
+          <p class="video-header__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        </div>
+        <div class="video-galary"></div>
+      </div>
     </section>
-    <footer class="footer-index">
-      <div class="footer-index__hashtag">
-        <a href="#">#visitsedona</a>
-      </div>
-      <ul class="footer-index__social">
-        <li>
-          <a class="social__social__btn--tw" href="#">
-            <span class="visually-hidden">Твиттер</span>
-          </a>
-        </li>
-        <li>
-          <a class="social__social__btn--fb" href="#">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
-        </li>
-        <li>
-          <a class="social__social__btn--yt" href="#">
-            <span class="visually-hidden">Ютуб</span>
-          </a>
-        </li>
-      </ul>
-      <div class="developer">
-        <span class="developer__developer-text">Разработано</span>
-        <span class="developer__developer-logo">
+    <footer class="page-footer">
+      <div class="block__wrapper">
+        <p class="page-footer__hashtag">#visitsedona</p>
+        <div class="page-footer_social">
+          <ul class="social-list">
+            <li>
+              <a class="social-list__item" href="#">
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
+            <li>
+              <a class="social-list__item" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+            <li>
+              <a class="social-list__item" href="#">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="developer">
+          <span class="developer__text">Разработано</span>
+
           <a href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="developer__logo"></span>
           </a>
-        </span>
+
+        </div>
       </div>
+
     </footer>
   </main>
 </body>
