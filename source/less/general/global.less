@@ -1,14 +1,4 @@
-html {
-  box-sizing: border-box;
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-html,
 body {
   min-width: 320px;
   color: @base-text-color;
@@ -19,13 +9,15 @@ body {
   text-transform: uppercase;
 }
 
-p,
-h1,
-h2,
-h3 {
+p {
   font-size: @base-font-size;
   font-weight: normal;
 }
+h1, 
+h2{
+  font-size: @font-size-title;
+  line-height: @line-height-title;
+  }
 
 a {
   text-decoration: none;
@@ -35,7 +27,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+.gallery__image{
+background-color: @image-background-color;
 
-.wrapper {
-  .container();
 }
+
