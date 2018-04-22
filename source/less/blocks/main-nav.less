@@ -1,7 +1,14 @@
 .main-nav__list {
     .space-reset();
     .reset-list();
-    @media (@tablet-width) {
-        text-align: center;
+    .wrapper();
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media(min-width: @screen-l-min) {
+    .main-nav__list {
+        flex-direction: row;
     }
 }
