@@ -2,11 +2,29 @@ body {
   .space-reset();
   min-width: 320px;
   color: @base-text-color;
-  background-color: @light-color;
+  background-color: @main-background-color;
   font-family: @base-font-family;
   font-size: @base-font-size;
   line-height: @base-line-height;
   text-transform: uppercase;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container {
+  box-shadow: 0 0 30px -4px rgba(0, 0, 0, .6);
+  .wrapper();
 }
 
 p {
@@ -14,10 +32,10 @@ p {
   font-weight: normal;
 }
 
-h1,
 h2 {
-  font-size: @font-size-title;
-  line-height: @line-height-title;
+  font-size: @font-size-bigger;
+  line-height: @title-line-height;
+  font-weight: @font-weight-style;
 }
 
 a {

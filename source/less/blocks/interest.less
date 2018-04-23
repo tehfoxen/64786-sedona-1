@@ -1,3 +1,40 @@
 .interest {
-    .space-reset();
+  .space-reset();
+  background-color: @light-color;
+display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px;
+  vertical-align: top;
+ 
+ 
+  
+  &__header {
+    font-size: @font-size-biggest;
+    line-height: @middle-line-height;
+  }
+  &__search-button {
+  display: inline-block;
+    background-color: #5496bd;
+    color: @light-color;
+    font-size: @font-size-bigger;
+    line-height: @title-line-height;
+    font-weight: bold;
+    width: 100%;
+    padding-top: 19px;
+    padding-bottom: 17px
+  }
+}
+
+@media(min-width: @screen-l-min) {
+  .interest {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+    flex-direction: row;
+    &__wrapper {
+      margin: 0 25%;
+    }
+  }
 }
