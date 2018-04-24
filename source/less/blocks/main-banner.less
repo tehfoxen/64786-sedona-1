@@ -5,11 +5,12 @@
   background-color: #e4f1f9;
   position: relative;
   width: 100%;
-  background: url("@{img-path}/bg-intro-triangle-mobile.svg"),
+  background: url("@{img-path}/bg-intro-triangle-desktop.svg"),
   url("@{img-path}/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% bottom;
-  background-size: 322px, auto;
+  background-size: auto, auto;
+  z-index: -1;
   &__intro-banner {
     .space-reset();
     position: relative;
@@ -17,18 +18,29 @@
     margin: 0 auto;
   }
 }
-
 .main-banner img {
   width: 282px;
   display: block;
 }
+.main-nav__toggle {
+  position: absolute;
+  top:0;
+  right:0;
+  z-index:2;
+  display: block;
+  width: 70px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+
 
 @media(min-width: @screen-l-min) {
   .main-banner {
-    background-image : url("@{img-path}/intro-triangle.svg"),
+    background-image : url("@{img-path}/bg-intro-triangle-desktop.svg"),
     url("@{img-path}/photo-background@1x.jpg");
     min-height: 507px;
-    background-size: 1200px 47px, auto;
+    background-size: auto,1200px 518px;
     background-position: 50% bottom;
   }
   .main-banner img {

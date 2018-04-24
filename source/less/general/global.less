@@ -8,6 +8,7 @@ body {
   line-height: @base-line-height;
   text-transform: uppercase;
 }
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -22,10 +23,11 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .container {
   box-shadow: 0 0 30px -4px rgba(0, 0, 0, .6);
-  margin:0;
-  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 p {
@@ -40,7 +42,7 @@ a {
 
 img {
   max-width: 100%;
-  height: auto;
+
 }
 
 .gallery__image {

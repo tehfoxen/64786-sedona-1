@@ -1,10 +1,8 @@
 .second-banner {
     .space-reset();
-    display: block;
     min-height: 158px;
+    margin: 0;
     background-color: #e4f1f9;
-    position: relative;
-    width: 100%;
     background: url("@{img-path}/bg-intro-triangle-mobile.svg"),
     url("@{img-path}/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat;
@@ -16,28 +14,20 @@
         text-align: center;
         margin: 0 auto;
         padding: 52px 0 0;
+        z-index: -1;
     }
 }
 
 @media(min-width: @screen-l-min) {
     .second-banner {
-        .space-reset();
         min-height: 290px;
-        padding-top: 100px;
-        background-image : url("@{img-path}/intro-triangle.svg"),
-    url("@{img-path}/photo-background@1x.jpg");
-    background-size: auto,1200px 518px;
+        background-image: url("@{img-path}/bg-intro-triangle-desktop.svg"),
+        url("@{img-path}/photo-background@1x.jpg");
+        background-size: auto, 1200px 518px;
+        background-position: 50% bottom;
         &__image {
             width: 460px;
-        }
-    }
-}
-
-@media(min-width:@extra-large-up) {
-    .second-banner {
-        min-height: 301px;
-        &__image {
-            width: 460px;
+            padding: 52px 0 0;
         }
     }
 }
