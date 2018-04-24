@@ -49,28 +49,41 @@
       <section class="gallery-photo">
         <div class="gallery-photo__wrapper">
           <article class="gallery  gallery--one">
-            <img class="gallery__image" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы" />
-            <h2 class="gallery__title">неродные просторы</h2>
-            <p class="gallery__author">Автор фото: Борис</p>
-            <span class="gallery__number">1350</span>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg" width="1200" height="400">
+              <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg" width="680" height="400">
+              <img class="gallery__image" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы" />
+            </picture>
+
+            <figcaption class="gallery__text">
+              <h2 class="gallery__title">неродные просторы</h2>
+              <p class="gallery__author">Автор фото: Борис</p>
+              <span class="gallery__number">1350</span>
+            </figcaption>
           </article>
           <article class="gallery  gallery--two">
             <img class="gallery__image" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность" />
-            <h2 class="gallery__title">Местная растительность</h2>
-            <p class="gallery__author">Автор фото: Сергей</p>
-            <span class="gallery__number">143</span>
+            <figcaption class="gallery__text">
+              <h2 class="gallery__title">Местная растительность</h2>
+              <p class="gallery__author">Автор фото: Сергей</p>
+              <span class="gallery__number">143</span>
+            </figcaption>
           </article>
           <article class="gallery  gallery--three">
             <img class="gallery__image" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север" />
-            <h2 class="gallery__title">Дорога на север</h2>
-            <p class="gallery__author">Автор фото: Борис</p>
-            <span class="gallery__number">96</span>
+            <figcaption class="gallery__text">
+              <h2 class="gallery__title">Дорога на север</h2>
+              <p class="gallery__author">Автор фото: Борис</p>
+              <span class="gallery__number">96</span>
+            </figcaption>
           </article>
           <article class="gallery  gallery--four">
             <img class="gallery__image" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола" />
-            <h2 class="gallery__title">Мост дьявола</h2>
-            <p class="gallery__author">Автор фото: Антон</p>
-            <span class="gallery__number">96</span>
+            <figcaption class="gallery__text">
+              <h2 class="gallery__title">Мост дьявола</h2>
+              <p class="gallery__author">Автор фото: Антон</p>
+              <span class="gallery__number">96</span>
+            </figcaption>
           </article>
         </div>
       </section>
@@ -86,11 +99,13 @@
         </div>
       </section>
       <footer class="page-footer">
-        <div class="hashtag">
-          <a class="hashtag__link" href="#">#visitsedona</a>
-        </div>
         <div class="page-footer__wrapper">
+          <div class="hashtag">
+            <a class="hashtag__link" href="#">#visitsedona</a>
+          </div>
+
           <div class="page-footer__social">
+
             <ul class="social-list">
               <li>
                 <a class="social-list__item" href="#">
@@ -111,7 +126,6 @@
           </div>
           <div class="developer">
             <span class="developer__text">Разработано</span>
-
             <a href="https://htmlacademy.ru/intensive/adaptive">
               <span class="developer__logo"></span>
             </a>
