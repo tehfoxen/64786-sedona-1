@@ -1,3 +1,33 @@
 .page-footer {
   .space-reset();
+  background-color: @light-color;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 35px 0;
+    flex-direction: column;
+  }
+}
+
+.hashtag a {
+  color: @light-dark;
+  font-weight: bold;
+  line-height: @title-line-height;
+  font-size: @base-line-height;
+}
+
+.developer {
+  &__text {
+    line-height: @title-line-height;
+  }
+}
+
+@media(min-width: @screen-l-min) {
+  .page-footer {
+    &__wrapper {
+      flex-direction: row;
+      flex-grow: 1;
+    }
+  }
 }

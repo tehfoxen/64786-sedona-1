@@ -1,5 +1,18 @@
 .map {
-  .space-reset();
-  background: url("@{img-path}/bg-map-mobile@1x.jpg") no-repeat;
-  min-height: 351px;
+    .space-reset();
+    display: flex;
+    justify-content: center;
+    background: url("@{img-path}/bg-map-mobile@1x.jpg") no-repeat;
+    min-height: 351px;
+}
+
+@media(min-width: @screen-l-min) {
+    .map{
+        background: url("@{img-path}/map-tablet.jpg") no-repeat;
+    }
+}
+@media(min-width: @extra-large-up) {
+    .map{
+        background: url("@{img-path}/map-desktop.jpg") no-repeat;
+    }
 }

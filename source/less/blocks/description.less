@@ -1,18 +1,70 @@
 .description {
   .space-reset();
+  &__wrapper{
+    display: flex;
+    flex-direction:column;
+    box-sizing: border-box;
+  }
 }
 
 .description__photo {
-  background-color: cd755d;
+  background-color: #cd755d;
   height: 260px;
+
   &--first {
     background: url("@{img-path}/main-city-mobile@1x.jpg") no-repeat;
+    background-size: cover;
   }
   &--second {
     background: url("@{img-path}/main-bridge-mobile@1x.jpg") no-repeat;
+    background-size: cover;
   }
 }
 
 .description__item {
   background-color: @block-color;
+  color: @font-size-color;
+  box-sizing: border-box;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  text-align: center;
+ 
+
+}
+
+@media(min-width: @screen-l-min) {
+  .description{
+    box-sizing: border-box;
+    justify-content: center;
+    &__wrapper{
+      flex-direction: row;
+    }
+  }
+  .description__item {
+  width: 33%;
+  }
+  .description__photo {
+    flex-grow: 3;
+    &--first {
+      background: url("@{img-path}/photo-city@1x.jpg") no-repeat;
+      background-size: cover;
+   
+      height: auto;
+    }
+    &--second {
+      background: url("@{img-path}/photo-bridge@1x.jpg") no-repeat;
+      background-size: cover;
+
+      height: auto;
+    }
+  }
+}
+
+
+@media (min-width:@extra-large-up){
+.description__item {
+padding: 50px;
+}
 }
