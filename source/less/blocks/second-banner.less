@@ -1,5 +1,33 @@
 .second-banner {
-  min-height: 158px;
-  background-color: #e4f1f9;
-  background : url("@{img-path}/bg-back-mobile@1x.jpg") no-repeat;
+    .space-reset();
+    min-height: 158px;
+    margin: 0;
+    background-color: #e4f1f9;
+    background: url("@{img-path}/bg-intro-triangle-mobile.svg"),
+    url("@{img-path}/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    background-size: auto, auto;
+    &__image {
+        display: block;
+        width: 230px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 52px 0 0;
+        z-index: -1;
+    }
+}
+
+@media(min-width: @screen-l-min) {
+    .second-banner {
+        min-height: 290px;
+        background-image: url("@{img-path}/bg-intro-triangle-desktop.svg"),
+        url("@{img-path}/photo-background@1x.jpg");
+        background-size: auto, 1200px 518px;
+        background-position: 50% bottom;
+        &__image {
+            width: 460px;
+            padding: 52px 0 0;
+        }
+    }
 }

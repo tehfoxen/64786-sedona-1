@@ -1,3 +1,27 @@
 .facilities {
   .space-reset();
+  &__wrapper {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: @light-color;
+  }
+}
+
+.facilities__item {
+  position: relative;
+  padding: 30px 20px 30px 70px;
+}
+
+@media(min-width: @screen-l-min) {
+  .facilities {
+    .space-reset();
+    &__wrapper {
+      flex-direction: row;
+    }
+    .facilities__item {
+      padding: 165px 45px 60px;
+    }
+  }
 }

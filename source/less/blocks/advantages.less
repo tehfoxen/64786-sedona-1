@@ -1,3 +1,30 @@
 .advantages {
   .space-reset();
+  &__wrapper {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: @advantages-background-color;
+  }
+}
+
+.advantages__item {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+@media(min-width: @screen-l-min) {
+  .advantages {
+    &__wrapper {
+      flex-direction: row;
+      flex-grow: 1;
+    }
+    .advantages__item {
+      padding: 30px 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      flex-grow: 1;
+      border-bottom: none;
+    }
+  }
 }
