@@ -8,10 +8,11 @@
 
 .main-nav {
     .space-reset();
+
 }
 
 .site-list__item {
-    min-height: 55px;
+    min-height: 54px;
     font-weight: 700;
     font-size: 18px;
     line-height: 53px;
@@ -21,21 +22,72 @@
     color: @light-color;
     text-align: center;
     font-size: @font-size-title;
+    color: @light-color;
 }
-.site-list__item:last-child {
-  border-top: 0;
-  border-bottom: 0;
+.site-list__item:last-child:after{
+  content: "";
+  bottom: 0;
+  display: block;
+  width: 100%;
+  background: linear-gradient(to top,#678fa8 0,transparent 5px);
+}
+.main-nav__wrapper {
+  position: relative;
+}
+.main-nav--closed .main-nav__toggle {
+    background: url("@{img-path}/icon-menu.svg") no-repeat 50% 50%;
+    background-size: 23px 22px;
 }
 
+.site-list__item:last-child {
+    border-top: 0;
+    border-bottom: 0;
+}
 
 .site-list__item a {
     color: @light-color;
 }
 
-.page-header__logo {
+.page-header__logo{
+  display: block;
+  width: 102px;
   height: 55px;
-  margin-top: 0;
-  order: 3;
+  margin: 0 auto;
+  z-index:1;
+}
+
+
+.main-nav__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: none;
+    outline: none;
+}
+
+.main-nav--opened .main-nav__toggle {
+    background: url("@{img-path}/icon-cross.svg") no-repeat 50% 50%;
+    background-size: 23px 22px;
+}
+
+.main-nav--nojs .main-nav__toggle {
+    display: none;
+}
+
+.main-nav--closed .site-list__item {
+    display: none;
+}
+
+@media (max-width: @mobile-width-only) {
+    .main-nav--closed .site-list__item {
+        display: none;
+    }
+    .main-nav--closed .user-list__item {
+        display: none;
+    }
 }
 
 @media(min-width: @screen-l-min) {
@@ -55,13 +107,26 @@
 
     }
     .page-header__logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-    z-index: 1;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        z-index: 1;
     }
     .site-list__item a {
         color: @base-text-color;
     }
+    .main-nav__toggle{
+      display: none;
+    }
+    .site-list__item:last-child:after{
+      content: "";
+
+      background:none;
+      height: 0;
+    }
+    .description__item.description__item--one {
+      background-image: none;
+
+  }
 }
