@@ -2,16 +2,25 @@
   .space-reset();
   &__wrapper {
     display: flex;
-    text-align: center;
-    justify-content: center;
     flex-direction: column;
-    background-color: @light-color;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #333;
+    background-color: #fff;
   }
 }
 
-.facilities__item {
-  position: relative;
-  padding: 30px 20px 30px 70px;
+
+.facilities__item--first svg,
+.facilities__item--second svg,
+.facilities__item--third svg
+ {
+  width: 37px;
+  height: 37px;
+  fill: #81b3d2;
 }
 
 @media(min-width: @screen-l-min) {

@@ -20,19 +20,27 @@
     background-size: cover;
   }
 }
-
+.description__item {
+  width: 100%;
+  }
 .description__item {
   background-color: @block-color;
   color: @font-size-color;
   box-sizing: border-box;
-  width: 320px;
   display: flex;
   flex-direction: column;
-  padding: 40px 20px;
+  padding: 44px 10px;
+  padding-bottom: 27px;
   text-align: center;
- 
 
 }
+.description__item--one {
+  background-image: url("@{img-path}/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: 50% top;
+}
+
+
 
 @media(min-width: @screen-l-min) {
   .description{
@@ -50,7 +58,7 @@
     &--first {
       background: url("@{img-path}/photo-city@1x.jpg") no-repeat;
       background-size: cover;
-   
+
       height: auto;
     }
     &--second {
