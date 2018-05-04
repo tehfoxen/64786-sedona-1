@@ -1,5 +1,24 @@
 .social-list {
+  .space-reset();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+
+&__link{
   display: flex;
-  text-decoration: none;
-  list-style: none;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  color: #fff;
+  background-color: @block-color;
+}
+}
+.social-list__item {
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+.social-list svg {
+  fill: #fff;
+  padding-top: 15px;
 }
