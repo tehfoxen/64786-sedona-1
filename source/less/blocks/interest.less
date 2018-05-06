@@ -4,18 +4,18 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 30px 20px;
     vertical-align: top;
     &__header {
         font-size: @font-size-bigger;
         line-height: @middle-line-height;
+
     }
     &__search-button {
         display: inline-block;
         background-color: #5496bd;
         color: @light-color;
         font-size: @font-size-bigger;
-        line-height: @title-line-height;
+        line-height: @base-line-height;
         font-weight: bold;
         width: 100%;
         padding-top: 19px;
@@ -24,7 +24,12 @@
     }
     &__wrapper {
       width: 100%;
+      padding: 12px 6%;
+      padding-bottom: 50px;
     }
+}
+.interest__text {
+  line-height: 24px;
 }
 
 @media(min-width: @screen-l-min) {

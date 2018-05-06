@@ -3,10 +3,11 @@
   background-color: @light-color;
   &__wrapper {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 35px 0;
     flex-direction: column;
+    align-items: center;
+    min-height: 230px;
+    margin: 0 20px;
+    padding: 35px 0;
   }
 }
 
@@ -16,10 +17,14 @@
   line-height: @title-line-height;
   font-size: @base-line-height;
 }
+.hashtag {
+  margin-bottom: 35px;
+}
 
 .developer {
   &__text {
     line-height: @title-line-height;
+
   }
 }
 .developer {
@@ -29,9 +34,9 @@
 
 .developer__link {
   display: block;
-  width: 48px;
+  width: 38px;
   height: 48px;
-  padding-top: 5px;
+  margin-top: -5px;
 }
 .developer svg {
   width: 100%;
