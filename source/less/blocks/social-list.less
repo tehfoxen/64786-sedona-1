@@ -19,7 +19,19 @@
   margin-right: 6px;
   margin-bottom: 6px;
 }
-.social-list svg {
+.social-list__link {
   fill: #fff;
+}
+.social-list svg {
   padding-top: 15px;
+}
+.social-list__link{
+  &:hover{
+    background-color: #669ec0;
+
+  }
+  &:active{
+    fill: rgba(255,255,255,.3);
+    background-color: #5496bd;
+  }
 }

@@ -1,28 +1,23 @@
 .description {
   .space-reset();
-  &__wrapper{
+  &__wrapper {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     box-sizing: border-box;
   }
 }
 
 .description__photo {
   background-color: #cd755d;
-  height: 260px;
-
-  &--first {
-    background: url("@{img-path}/main-city-mobile@1x.jpg") no-repeat;
-    background-size: cover;
-  }
   &--second {
-    background: url("@{img-path}/main-bridge-mobile@1x.jpg") no-repeat;
     background-size: cover;
   }
 }
+
 .description__item {
   width: 100%;
-  }
+}
+
 .description__item {
   background-color: @block-color;
   color: @font-size-color;
@@ -32,64 +27,65 @@
   padding: 44px 2%;
   padding-bottom: 27px;
   text-align: center;
-
 }
+
 .description__item--one {
   background-image: url("@{img-path}/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: 50% top;
 }
+
 .description__item--second {
   padding: 25px 2%;
 }
 
+.description__photo {
+  min-width: 320px;
+  height: 256px;
+  background-size: cover;
+}
 
 @media(min-width: @screen-l-min) {
-  .description{
+  .description {
     box-sizing: border-box;
     justify-content: center;
-    &__wrapper{
+    &__wrapper {
       flex-direction: row;
     }
   }
   .description__item {
-  width: 33%;
+    width: 33.33333333333333333333333%;
   }
   .description__photo {
     flex-grow: 3;
     &--first {
-      background: url("@{img-path}/photo-city@1x.jpg") no-repeat;
       background-size: cover;
-
-      height: auto;
+     
     }
     &--second {
-      background: url("@{img-path}/photo-bridge@1x.jpg") no-repeat;
       background-size: cover;
-
-      height: auto;
     }
   }
-    .description__header {
-      font-size: 14px;
-      font-size: 21px;
-      line-height: 26px;
+  .description__header {
+    font-size: 14px;
+    font-size: 21px;
+    line-height: 26px;
   }
   .description__item--one {
     padding: 30px 20px;
   }
   .description__item--second {
     padding: 28px;
-      order: 2;
-      padding: 28px 20px;
+    order: 2;
+    padding: 28px 20px;
   }
+  .description__photo {
+    background-size: cover;
   }
-
-
-
-
-@media (min-width:@extra-large-up){
-.description__item {
-padding: 50px;
 }
+
+@media (min-width:@extra-large-up) {
+  .description__photo {
+    background-size: cover;
+  }
 }
