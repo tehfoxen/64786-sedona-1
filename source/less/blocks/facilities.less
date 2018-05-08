@@ -41,12 +41,13 @@
     .facilities {
         .space-reset();
         background-color: @light-color;
+        margin-bottom: -10px;
         &__wrapper {
+            .space-reset();
             flex-direction: row;
             min-height: 256px;
             padding: 30px 0px;
             text-align: center;
-            margin-bottom: -5px;
         }
     }
     .facilities__item--first svg,
@@ -57,17 +58,46 @@
     }
     .facilities__item {
         flex-direction: column;
-        width: 33.333%;
         min-height: 256px;
         padding: 25px 0px;
         text-align: center;
         padding-bottom: 0;
     }
+    .facilities__header{
+        font-size:21px;
+        font-weight: bold;
+    }
+    .facilities__item--third .facilities__header{
+        margin-right:0;
+        margin-top: 10px;
+    }
+    .facilities__item--first .facilities__header{
+        margin-right: 6px;
+    }
+    .facilities__image {
+        padding: 0;
+    }
+    .facilities__image:first-child {
+        margin-right: 7px;
+        margin-bottom: 5px;
+    }
+    .facilities__item--second .facilities__image {
+        padding-left: 15px;
+        margin-right: 0;
+    }
+    .facilities__item--third .facilities__image {
+        padding-top: 5px;
+        padding-left: 5px
+    }
     .facilities__item--second {
         order: 3;
     }
+    .description__item.description__item--second {
+        order: 2;
+    }
     .facilities__text {
-        padding: 5px 10px;
+        padding: 5px 45px;
+        padding-left: 37px;
     }
     .facilities__block {
         margin-bottom: 9px;
