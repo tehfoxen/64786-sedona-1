@@ -9,6 +9,7 @@
 
 .description__photo {
   background-color: #cd755d;
+
   &--second {
     background-size: cover;
   }
@@ -43,12 +44,13 @@
 }
 
 .description__item--second {
-  padding: 25px 2%;
+  padding: 39px 2%;
+  padding-bottom: 0;
 }
 
 .description__photo {
   min-width: 320px;
-  height: 256px;
+  height: 260px;
   background-size: cover;
 }
 
@@ -107,5 +109,28 @@
 @media (min-width:@extra-large-up) {
   .description__photo {
     background-size: cover;
+    width: 800px;
+    height: 256px;
   }
+  .description__header {
+    padding: 0 50px;
+}
+.description__item.description__item--one {
+  background-image: none;
+  padding: 50px;
+  padding-bottom: 0;
+}
+.description__text {
+  padding: 2px 0;
+}
+.facilities__image:first-child {
+  margin-right:0;
+}
+.facilities__item--second .facilities__image {
+  padding-left:0;
+}
+.facilities__text {
+    .space-reset();
+    padding: 5px 55px;
+}
 }
