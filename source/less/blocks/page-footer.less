@@ -7,7 +7,7 @@
         align-items: center;
         min-height: 230px;
         margin: 0 20px;
-        padding: 35px 0;
+        padding: 37px 0;
     }
 }
 
@@ -19,7 +19,7 @@
 }
 
 .hashtag {
-    margin-bottom: 35px;
+    margin-bottom: 37px;
 }
 
 .developer {
@@ -35,22 +35,27 @@
 
 .developer__link {
     display: block;
-    width: 38px;
+    width: 40px;
     height: 48px;
     margin-top: -5px;
+    padding-left: 17px;
 }
 
 .developer svg {
-    width: 100%;
     height: auto;
+    width: 27px;
+    height: 34px;
 }
 
-.developer path {
-    &:active {
-        fill: #b2b2b2;
-    }
+.developer svg {
     &:hover {
         fill: #81b3d2;
+    }
+
+}
+.developer__link svg {
+    &:active {
+        fill: #b2b2b2;
     }
 }
 
@@ -64,10 +69,11 @@
             justify-content: space-between;
             align-items: center;
             min-height: auto;
+            padding: 30px 0;
         }
     }
     .hashtag {
-        margin-bottom: 45px;
+        margin-bottom: 37px;
         margin-top: 0;
     }
     .developer__text {
@@ -83,5 +89,23 @@
     }
     .page-footer__social {
         margin-left: 5px;
+        margin-top: 5px;
+    }
+}
+
+@media(min-width: @screen-xl-min) {
+    .page-footer {
+        &__wrapper {
+            margin: 0 120px;
+        }
+    }
+    .developer__text {
+        margin-bottom: 40px;
+    }
+    .developer__link {
+        padding-left: 0;
+    }
+    .page-footer__social {
+        margin-left: 0;
     }
 }

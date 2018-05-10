@@ -32,7 +32,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 57px 20px;
+  padding: 57px 18px;
   padding-bottom: 25px;
   text-align: center;
 }
@@ -44,15 +44,15 @@
 }
 
 .description__item--second {
-  padding: 39px 2%;
-  padding-bottom: 0;
+  padding-bottom: 23px;
+  padding-top: 39px;
 }
 
 .description__photo {
-  min-width: 320px;
   height: 260px;
   background-size: cover;
 }
+
 
 @media(min-width: @screen-l-min) {
   .description {
@@ -81,12 +81,13 @@
     margin-bottom: 10px;
     
   }
-  .description__item{
-        padding: 57px 20px;
+  .description__item--one{
+    padding: 44px 18px;
     padding-bottom:0;
   }
   .description__photo {
     background-size: cover;
+    height: 256px;
   }
   .description__text {
     padding: 2px 17px;
@@ -96,13 +97,16 @@
  .description__header {
   .space-reset();
   margin-bottom: 10px;
-  padding-left: 28px;
+  padding-left: 29px;
     padding-right: 25px;
  }
 
 }
 .description__number {
   margin-bottom: 5px;
+}
+.description__item {
+  width: 33.333333333333%;
 }
 }
 
@@ -123,14 +127,5 @@
 .description__text {
   padding: 2px 0;
 }
-.facilities__image:first-child {
-  margin-right:0;
-}
-.facilities__item--second .facilities__image {
-  padding-left:0;
-}
-.facilities__text {
-    .space-reset();
-    padding: 5px 55px;
-}
+
 }

@@ -6,8 +6,10 @@
     text-align: center;
     vertical-align: top;
     &__header {
+        .space-reset();
         font-size: @font-size-bigger;
         line-height: @middle-line-height;
+        margin-bottom: 20px;
     }
     &__search-button {
         display: inline-block;
@@ -17,18 +19,19 @@
         line-height: @base-line-height;
         font-weight: bold;
         width: 100%;
-        padding-top: 19px;
+        padding-top: 18px;
         padding-bottom: 17px;
+        margin-bottom: 18px;
     }
     &__wrapper {
         width: 100%;
-        padding: 12px 6%;
-        padding-bottom: 50px;
+        padding: 30px 20px
     }
 }
 
 .interest__text {
     line-height: 24px;
+    margin-bottom: 35px;
 }
 
 @media(min-width: @screen-l-min) {
@@ -38,14 +41,13 @@
         text-align: center;
         flex-direction: row;
         &__wrapper {
-            padding: 50px 90px;
-            padding-bottom: 58px;
             width: 573px;
+            padding: 50px 39px;
+            padding-bottom: 41px;
         }
     }
     .interest__header {
         .space-reset();
-
         font-size: 30px;
         line-height: 26px;
         margin-top: 4px;
@@ -70,5 +72,15 @@
     }
     .interest__text {
         margin-bottom: 42px;
+        padding-top: 2px;
+    }
+}
+
+@media(min-width: @screen-l-min) {
+    .interest__wrapper {
+        padding-bottom: 47px;
+    }
+    .interest__text {
+        margin-bottom: 47px;
     }
 }
