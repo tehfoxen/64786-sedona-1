@@ -19,13 +19,13 @@
               <span class="visually-hidden">Открыть меню</span>
             </button>
             <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--active">
+              <li class="site-list__item">
                 <a href="index.html">Главная</a>
               </li>
               <li class="site-list__item">
                 <a href="photo.html">Фото и Видео</a>
               </li>
-              <li class="site-list__item">
+              <li class="site-list__item  site-list__item--active">
                 <a>Форма отзыва</a>
               </li>
               <li class="site-list__item">
@@ -33,7 +33,7 @@
               </li>
               <li class="site-list__item main-nav__item--logo">
 
-                <a class="page-header__logo">
+                <a href="index.html" class="page-header__logo">
                   <picture>
                     <source media="(max-width: 767px)" srcset="img/logo-sedona-mobile.svg">
                     <source media="(max-width: 1279px)" srcset="img/logo-sedona-tablet.svg">
@@ -64,22 +64,25 @@
         <fieldset class="feedback__section">
           <legend class="feedback__header feedback__header--first">Представьтесь:</legend>
           <div class="main-info">
-            <label class="main-info__text" for="firstname">Имя* </label>
+
             <div class="text-box">
+                <label class="main-info__text" for="firstname">Имя* </label>
               <input class="text-box__input" type="text" placeholder="Петр" id="firstname" name="firstname" />
             </div>
 
           </div>
           <div class="main-info">
-            <label class="main-info__text" for="lastname">Фамилия*</label>
+
             <div class="text-box">
+                <label class="main-info__text" for="lastname">Фамилия*</label>
               <input class="text-box__input" type="text" placeholder="Иванов" id="lastname" name="lastname" />
             </div>
 
           </div>
           <div class="main-info">
-            <label class="main-info__text" for="midname">Отчество </label>
+
             <div class="text-box">
+                <label class="main-info__text" for="midname">Отчество </label>
               <input class="text-box__input" type="text" placeholder="Александрович" id="midname" name="midname" />
             </div>
 
@@ -89,13 +92,15 @@
           <legend class="feedback__header feeddback__header--second">Контактная информация:*</legend>
           <div class="contact-info">
             <label class="contact-info__text" for="phone">Контактный телефон*: </label>
-            <div class="text-box">
-              <input class="contact-info__input contact-info__input--icon" type="tel" placeholder="Введите телефон" name="phone" id="phone">
+            <div class="text-box contact-info__icon">
+
+              <input class="contact-info__input " type="tel" placeholder="Введите телефон" name="phone" id="phone">
+
             </div>
           </div>
           <div class="contact-info">
             <label class="contact-info__text" for="email">Электронная почта*:</label>
-            <div class="text-box">
+            <div class="text-box contact-info--email">
               <input class="contact-info__input contact-info__input--email" type="email" placeholder="Введите e-mail" name="email" id="email">
 
             </div>
