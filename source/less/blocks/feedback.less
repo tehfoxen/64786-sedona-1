@@ -6,7 +6,7 @@
         flex-wrap: wrap;
         justify-content: center;
         flex-direction: column;
-        padding-top: 38px;
+        padding-top: 23px;
         border-bottom: 1px solid #e5e5e5;
         padding-bottom: 2px;
     }
@@ -24,11 +24,10 @@ display: none;
 }
 
 .feedback__mainheader {
-    .wrapper();
     text-align: center;
     font-size: 18px;
     line-height: 26px;
-    padding-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 .feedback__form {
@@ -179,14 +178,16 @@ display: none;
 }
 
 .checked-set__text {
+  display: flex;
+  justify-content: space-between;
     position: relative;
-    padding-left: 24px;
     font-weight: 700;
     font-size: 18px;
     line-height: 58px;
     text-align: left;
     color: #000;
     text-transform: none;
+
 }
 
 .toggle-set__item {
@@ -199,11 +200,11 @@ display: none;
     }
 }
 
-.checked-set__input:checked+.checkbox-set__checkbox:hover::before {
+.checked-set__input:checked+.checked-set__text:hover::before {
     background-color: #e5e5e5;
 }
 
-.checked-set__input:checked+.checkbox-set__checkbox:active::before {
+.checked-set__input:checked+.checked-set__text:active::before {
     background-color: #d5d5d5;
 }
 
@@ -238,6 +239,7 @@ input[type=radio] {
     width: 58px;
     height: 58px;
     background: #e6e6e6 url(../img/icon-phone.svg) no-repeat center;
+
 }
 
 .contact-info--email:before {
@@ -289,7 +291,7 @@ input[type=radio] {
     display: none;
 }
 
-.checkbox-set__checkbox::before {
+.checked-set__text::before {
     content: "";
     display: block;
     width: 56px;
@@ -298,6 +300,7 @@ input[type=radio] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 25px;
 }
 
 .feedback__header.feedback__header--fifth {
@@ -323,7 +326,7 @@ input[type=radio] {
     font-family: inherit;
 }
 
-.checked-set__input:checked+.checkbox-set__checkbox::before {
+.checked-set__input:checked+.checked-set__text::before {
     background: #f2f2f2 url(../img/icon-tick.svg) no-repeat 50% 50%;
 }
 
@@ -408,18 +411,20 @@ input[type=radio] {
     .feedback__mainheader {
         font-size: 30px;
         line-height: 26px;
+        margin-bottom: 30px;
+
     }
     .feedback__wrapper {
-        padding-top: 75px;
+      padding-top: 50px;
         border-bottom: 0;
         border-bottom: 0;
     }
     .feedback__text {
         max-width: 445px;
         margin: 0 auto;
-        padding-top: 20px;
         padding-left: 2px;
         padding-right: 10px;
+        padding-bottom: 2px;
     }
     .feedback__header--third,
     .feedback__header--first {
@@ -456,26 +461,39 @@ input[type=radio] {
         line-height: 26px;
         padding-top: 36px;
     }
+    .feedback__header--fourth{
+      position: relative;
+    }
     .feeddback__header--second::before,
     .feeddback__header--second::after,
     .feedback__header--fourth::before,
     .feedback__header--fourth::after {
         content: "";
         display: block;
-        width: 25%;
-        height: 1px;
+        width: 18%;
+        height: 0.5px;
         background: #dbdbdb;
         transform: translateY(-50%);
         position: absolute;
     }
-    .feeddback__header--second::before,
-    .feedback__header--fourth::before {
-        left: 50px;
-        top: 50px;
+    .feeddback__header--second::before
+    {
+      left: 35px;
+      top: 50px;
     }
-    .feeddback__header--second::after,
+    .feeddback__header--second::after {
+
+      right: 35px;
+      top: 50px;
+    }
+    .feedback__header--fourth::before {
+      left: 10px;
+      top: 50px;
+
+    }
+
     .feedback__header--fourth::after {
-        right: 50px;
+        right: 10px;
         top: 50px;
     }
     .contact-info {
@@ -513,11 +531,12 @@ input[type=radio] {
         justify-content: space-between;
         margin: 0 100px;
     }
-    .checkbox-set__checkbox::before {
+    .checked-set__text::before {
         content: "";
         left: 24px;
         display: block;
         top: 28px;
+        margin-right: 24px;
     }
     .feedback__header.feedback__header--fifth {
         font-size: 21px;
@@ -535,7 +554,7 @@ input[type=radio] {
         display: inline-block;
     }
     .feedback__section:nth-child(3) {
-   
+
         border-bottom: 0;
     }
 }
@@ -563,7 +582,7 @@ input[type=radio] {
       margin-bottom: 74px;
     }
     .feedback__wrapper {
-        padding-top: 112px;
+        padding-top: 86px;
     }
     .feedback__mainheader {
         margin-left: 0;
