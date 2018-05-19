@@ -62,7 +62,7 @@
   border: none;
   outline: none;
 }
-.video__replay path {
+.video__replay--icon{
   fill: #5e6c75;
 
 &:hover {
@@ -81,7 +81,8 @@
   outline: none;
   padding-left: 75px;
 }
-.video__subtitles--button  path{
+.video__replay--icon{
+
 fill: #5e6c75;
 
 &:hover {
@@ -99,7 +100,9 @@ fill: #5e6c75;
   border: none;
   outline: none;
 }
-.video__fullscreen--button path{
+.video__subtitles--icon,
+.video__fullscreen--icon
+{
   fill: #5e6c75;
 
   &:hover {
@@ -162,7 +165,8 @@ fill: #5e6c75;
     margin: 0 auto;
     padding-top: 30px;
 }
-.video__replay path {
+.video__replay--icon {
+  cursor: pointer;
   fill: #ffffff;
 
 &:hover {
@@ -172,7 +176,7 @@ fill: #5e6c75;
   fill: #b8b8b8;
 }
 }
-.video__subtitles--button  path{
+.video__subtitles--icon{
   fill: #ffffff;
 
   &:hover {
@@ -182,7 +186,7 @@ fill: #5e6c75;
     fill: #b8b8b8;
   }
   }
-  .video__fullscreen--button polygon {
+  .video__fullscreen--icon{
     fill: #ffffff;
 
     &:hover {

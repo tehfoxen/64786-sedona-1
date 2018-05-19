@@ -46,6 +46,7 @@
 .description__item--second {
   padding-bottom: 23px;
   padding-top: 39px;
+
 }
 
 .description__photo {
@@ -120,6 +121,12 @@
 .description__item {
   width: 33.333333333333%;
 }
+.description__item--one,
+.description__item--second {
+
+width: auto;
+flex-grow: 1;
+}
 }
 @media(min-width: @screen-xl-min) {
   .description__item--one .description__text{
@@ -155,3 +162,6 @@
 }
 
 }
+
+
+
