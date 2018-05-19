@@ -36,5 +36,8 @@
   ],
   "engines": {
     "node": "8.11"
+  },
+  "dependencies": {
+    "gulp-svgmin": "^1.2.4"
   }
 }
