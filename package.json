@@ -15,12 +15,12 @@
     "stylelint": "9.2.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
-  "scripts": {
+"scripts": {
+    "build": "gulp build",
     "editorconfig": "editorconfig-cli",
+    "start": "npm run build && gulp serve",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp style",
-    "start": "gulp serve"
+    "test": "npm run editorconfig && npm run stylelint"
   },
   "browserslist": [
     "last 2 versions",
@@ -39,6 +39,7 @@
     "node": "8.11"
   },
   "dependencies": {
+    "del": "^3.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.2.3",
