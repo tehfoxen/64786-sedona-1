@@ -1,4 +1,5 @@
 .description {
+<<<<<<< HEAD
   .space-reset();
   &__wrapper {
     display: flex;
@@ -13,6 +14,27 @@
   &--second {
     background-size: cover;
   }
+=======
+    .space-reset();
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+}
+
+.description__photo {
+    background-color: #cd755d;
+    height: 260px;
+    &--first {
+        background: url("@{img-path}/main-city-mobile@1x.jpg") no-repeat;
+        background-size: cover;
+    }
+    &--second {
+        background: url("@{img-path}/main-bridge-mobile@1x.jpg") no-repeat;
+        background-size: cover;
+    }
+>>>>>>> 1dfe7211c747ff957d4fe292b29592501435213d
 }
 .description__header {
   .space-reset();
@@ -27,6 +49,7 @@
 }
 
 .description__item {
+<<<<<<< HEAD
   background-color: @block-color;
   color: @font-size-color;
   box-sizing: border-box;
@@ -52,10 +75,21 @@
 .description__photo {
   height: 260px;
   background-size: cover;
+=======
+    background-color: @block-color;
+    color: @font-size-color;
+    box-sizing: border-box;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+>>>>>>> 1dfe7211c747ff957d4fe292b29592501435213d
 }
 
 
 @media(min-width: @screen-l-min) {
+<<<<<<< HEAD
   .description {
     box-sizing: border-box;
     justify-content: center;
@@ -101,10 +135,36 @@
 .description__item--one .description__text{
   padding-top: 15px;
   padding-left: 2px;
+=======
+    .description {
+        box-sizing: border-box;
+        justify-content: center;
+        &__wrapper {
+            flex-direction: row;
+        }
+    }
+    .description__item {
+        width: 33%;
+    }
+    .description__photo {
+        flex-grow: 3;
+        &--first {
+            background: url("@{img-path}/photo-city@1x.jpg") no-repeat;
+            background-size: cover;
+            height: auto;
+        }
+        &--second {
+            background: url("@{img-path}/photo-bridge@1x.jpg") no-repeat;
+            background-size: cover;
+            height: auto;
+        }
+    }
+>>>>>>> 1dfe7211c747ff957d4fe292b29592501435213d
 }
 .description__item--second .description__text{
   padding-top: 17px;
 
+<<<<<<< HEAD
 }
 .description__item--second {
  .description__header {
@@ -152,6 +212,12 @@ flex-grow: 1;
   background-image: none;
   padding: 50px;
   padding-bottom: 0;
+=======
+@media (min-width:@extra-large-up) {
+    .description__item {
+        padding: 50px;
+    }
+>>>>>>> 1dfe7211c747ff957d4fe292b29592501435213d
 }
 .description__item--second .description__text {
   max-width: 230px;

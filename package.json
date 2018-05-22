@@ -39,6 +39,7 @@
     "node": "8.11"
   },
   "dependencies": {
+<<<<<<< HEAD
     "gulp-imagemin": "^4.1.0",
     "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.2.3",
@@ -47,5 +48,8 @@
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.1",
     "svg4everybody": "^2.1.9"
+=======
+    "gulp-svgmin": "^1.2.4"
+>>>>>>> 1dfe7211c747ff957d4fe292b29592501435213d
   }
 }
