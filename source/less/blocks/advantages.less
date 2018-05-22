@@ -1,30 +1,88 @@
 .advantages {
-  .space-reset();
-  &__wrapper {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: @advantages-background-color;
-  }
+    .space-reset();
+    &__wrapper {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: @advantages-background-color;
+    }
 }
 
 .advantages__item {
-  border-bottom: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 30px 35px 12px;
+}
+
+.advantages__header {
+    .space-reset();
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 13px;
 }
 
 @media(min-width: @screen-l-min) {
-  .advantages {
-    &__wrapper {
-      flex-direction: row;
-      flex-grow: 1;
+    .advantages {
+        &__wrapper {
+            flex-direction: row;
+            flex-grow: 1;
+        }
+
     }
     .advantages__item {
-      padding: 30px 20px;
-      margin-left: 20px;
-      margin-right: 20px;
-      flex-grow: 1;
-      border-bottom: none;
+        padding: 44px 0;
+        width: 33.3333333333333333333333%;
+        padding: 44px 45px 40px;
+        padding-bottom: 28px;
     }
-  }
+    .advantages__header {
+        font-size: 21px;
+        line-height: 26px;
+        margin-bottom: 10px;
+        padding-right: 15px;
+    }
+    .advantages__number {
+        padding-right: 12px;
+    }
+    .advantages__text:first-child {
+        padding: 6px 19px;
+    }
+    .advantages__text {
+        padding-right: 8px;
+        padding-top: 7px;
+    }
+}
+
+@media(min-width: @screen-xl-min) {
+    .advantages {
+        &__wrapper {
+            .wrapper();
+
+            flex-direction: row;
+            flex-grow: 1;
+            padding-bottom: 30px;
+        }
+        .advantages__item {
+            padding: 44px 40px 40px;
+            padding-bottom: 22px;
+            border-bottom: none;
+            width: 33.3333333333333333333333%;
+            box-sizing: border-box;
+        }
+        .advantages__header {
+            max-width: 115px;
+            .space-reset();
+            margin: 0 auto;
+            padding-right: 0;
+            margin-bottom: 7px;
+        }
+        .advantages__number {
+            padding-right: 0px;
+        }
+        .advantages__text {
+            padding-right: 0px;
+            padding-top: 9px;
+            padding-left: 0px;
+        }
+    }
 }
