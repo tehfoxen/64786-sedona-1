@@ -15,12 +15,12 @@
     "stylelint": "9.2.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
-"scripts": {
-    "build": "gulp build",
+  "scripts": {
     "editorconfig": "editorconfig-cli",
-    "start": "npm run build && gulp serve",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "test": "npm run editorconfig && npm run stylelint"
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp style",
+    "start": "gulp serve"
   },
   "browserslist": [
     "last 2 versions",
