@@ -76,12 +76,7 @@ gulp.task("html", function() {
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("jsmin", function() {
-  return gulp.src("source/js/script.js")
-    .pipe(jsmin())
-    .pipe(rename("script.min.js"))
-    .pipe(gulp.dest("build/js"));
-});
+
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
@@ -96,7 +91,6 @@ gulp.task("build", function (done) {
     "style",
     "sprite",
     "html",
-    "jsmin",
     done
   );
 });
