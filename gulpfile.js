@@ -17,22 +17,22 @@ var run = require("run-sequence");
 var del = require("del");
 
 
-gulp.task("clean", function() {
+gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("copy", function() {
+gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**"
   ], {
-    base: "source"
-  })
-  .pipe(gulp.dest("build"));
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
 });
 
-gulp.task("style", function() {
+gulp.task("style", function () {
   gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(less())
@@ -50,38 +50,38 @@ gulp.task("images", function () {
   return gulp.src([
     "source/img/**/*.{png,jpg}",
     "source/img/*.svg"
-    ])
-  .pipe(imagemin([
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.jpegtran({progressive: true}),
-    imagemin.svgo()
-  ]))
-  .pipe(gulp.dest("source/img"));
+  ])
+    .pipe(imagemin([
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.jpegtran({ progressive: true }),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("source/img"));
 });
 
-gulp.task("sprite", function() {
+gulp.task("sprite", function () {
   return gulp.src("source/img/sprite-*.svg")
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("html", function() {
+gulp.task("html", function () {
   return gulp.src("source/*.html")
-  .pipe(posthtml([
-    include()
-  ]))
-  .pipe(gulp.dest("build"));
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"));
 });
 
 
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
-  .pipe(webp({quality: 80}))
-  .pipe(gulp.dest("source/img"));
+    .pipe(webp({ quality: 80 }))
+    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("build", function (done) {
@@ -95,7 +95,7 @@ gulp.task("build", function (done) {
   );
 });
 
-gulp.task("serve", function() {
+gulp.task("serve", function () {
   server.init({
     server: "build/",
     notify: false,
