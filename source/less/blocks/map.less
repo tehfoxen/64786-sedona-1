@@ -12,8 +12,13 @@
         background-size: cover;
     }
     &__wrapper{
-            width: 100%;
+
+      width: 100%;
     }
+    .map__wrapper iframe {
+      width: 100%;
+      height: 351px;
+  }
 }
 
 @media(min-width: @screen-l-min) {
@@ -34,4 +39,8 @@
             background: url("@{img-path}/bg-map-desktop@2x.jpg") no-repeat;
         }
     }
+    .map__wrapper iframe {
+      width: 100%;
+      height: 351px;
+  }
 }
