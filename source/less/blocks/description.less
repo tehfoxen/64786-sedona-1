@@ -1,8 +1,10 @@
+
 .description__wrapper {
     .space-reset();
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+
 }
 
 .description__photo {
@@ -50,6 +52,7 @@
     background-size: cover;
 }
 
+
 @media(min-width: @screen-l-min){
     .description {
         box-sizing: border-box;
@@ -59,6 +62,7 @@
     {
       flex-direction: row;
   }
+
     .description__photo {
         flex-shrink: 0;
         width: 510px;
@@ -68,6 +72,7 @@
         &--second {
             background-size: cover;
         }
+
     }
     .description__item--one .description__header {
         padding: 0 50px;
@@ -115,6 +120,7 @@
     .description__item--second {
         flex-grow: 1;
     }
+
 }
 
 @media(min-width: @screen-xl-min) {
