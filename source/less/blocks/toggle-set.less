@@ -1,0 +1,88 @@
+.toggle-set {
+  padding-bottom: 9px;
+}
+.toggle-set__text {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: 200px;
+  padding-left: 80px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
+  color: #000;
+  text-transform: none;
+  cursor: pointer;
+  padding-top: 14px;
+}
+.toggle-set__item {
+  margin-bottom: 13px;
+  &:hover {
+      background-color: #e5e5e5;
+  }
+  &:active {
+      background-color: #d5d5d5;
+  }
+}
+.toggle-set__input:checked~.toggle-set__checkbox:active::before {
+  content: '';
+  background-color: #a4a4a4;
+}
+
+.toggle-set__item input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+  cursor: pointer;
+}
+.toggle-set__item {
+  position: relative;
+  display: block;
+  width: 57px;
+  height: 57px;
+  border: none;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.toggle-set__input {
+  display: none;
+}
+
+.toggle-set__input:checked~.toggle-set__checkbox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: #000;
+  cursor: pointer;
+}
+@media(min-width: @screen-l-min) {
+  .toggle-set {
+    padding-left: 30px;
+    padding-top: 39px;
+}
+.toggle-set__item {
+    margin-bottom: 22px;
+}
+}
+@media(min-width: @screen-xl-min) {
+  .toggle-set__text {
+    margin-left: -2px;
+}
+}
+@media(min-width: @screen-xl-min) {
+  .toggle-set {
+    padding-left: 3px;
+    padding-top: 3px;
+}
+}
