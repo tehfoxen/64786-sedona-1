@@ -119,11 +119,11 @@
         </fieldset>
         <fieldset class="feedback__section feedback__section--contacts">
           <legend class="feedback__header feeddback__header--second">Контактная информация:*</legend>
-          <div class="contact-info__wrapper">
+          <div class="contact-info-wrapper">
             <div class="contact-info">
               <label class="contact-info__text" for="phone">
                 <span class="contact-info__hide">Контактный </span> телефон*: </label>
-              <div class="text-box contact-info__icon">
+              <div class="contact-info__box contact-info--icon">
 
                 <input class="contact-info__input " type="tel" placeholder="Введите телефон" name="phone" id="phone">
 
@@ -131,7 +131,7 @@
             </div>
             <div class="contact-info">
               <label class="contact-info__text" for="email">Электронная почта*:</label>
-              <div class="text-box contact-info--email">
+              <div class="contact-info__box contact-info--email">
                 <input class="contact-info__input contact-info__input--email" type="email" placeholder="Введите e-mail" name="email" id="email">
 
               </div>
@@ -202,6 +202,26 @@
           </div>
         </fieldset>
       </form>
+      <section class="feedback__modal feedback__modal--failure modal modal--failure" id="modal-failure">
+          <h2 class="modal__title">Что-то пошло не так!</h2>
+          <p class="modal__text">
+            Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+          </p>
+          <button class="modal__button button" id="modal-button-failure" type="button">Ок</button>
+        </section>
+
+        <section class="feedback__modal feedback__modal modal" id="modal-success">
+          <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+          <p class="modal__text">
+            Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>
+            В ближайшее время мы опубликуем его на сайте.
+          </p>
+          <div class="modal__button-wrapper">
+            <button class="modal__button button" id="modal-button-success" type="button">Закрыть окно</button>
+          </div>
+        </section>
+      </section>
+    </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <div class="hashtag">
@@ -212,18 +232,15 @@
 
             <ul class="social-list">
               <li class="social-list__item">
-                <span class="visually-hidden">Твиттер</span>
                 <a class="social-list__link" href="# ">
-
                   <svg class="social-list__logo" width="17.5" height="14.663">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
                   </svg>
+                  Twitter
                 </a>
               </li>
               <li class="social-list__item ">
-                <span class="visually-hidden ">Фейсбук</span>
-                <a class="social-list__link " href="# ">
-
+                <a class="social-list__link " href="# ">Facebook
                   <svg class="social-list__logo" width="8.672" height="18.944">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
                   </svg>
@@ -231,9 +248,7 @@
                 </a>
               </li>
               <li class="social-list__item ">
-                <span class="visually-hidden ">Ютуб</span>
-                <a class="social-list__link " href="# ">
-
+                <a class="social-list__link " href="# ">Youtube
                   <svg enable-background="new 0 0 19.979 14.015" height="14.015" viewBox="0 0 19.979 14.015" width="19.979" xmlns="http://www.w3.org/2000/svg">
                     <path d="m17.145 0h-14.31c-1.56 0-2.835 1.275-2.835 2.835v8.345c0 1.56 1.275 2.835 2.835 2.835h14.31c1.56 0 2.835-1.275 2.835-2.835v-8.345c-.001-1.56-1.276-2.835-2.835-2.835zm-10.109 10.392v-6.769l6.769 3.384z"
                     />
@@ -244,9 +259,9 @@
           </div>
           <div class="developer ">
             <span class="developer__text ">Разработано</span>
-            <a class="developer__link " href="https://htmlacademy.ru/intensive/adaptive ">
+            <a class="developer__link " href="https://htmlacademy.ru/intensive/adaptive " >
               <span class="developer__logo "></span>
-              <svg class="page-footer__copyright-logo" width="26.943" height="34.09">
+              <svg class="page-footer__copyright-logo" width="26.943" height="34.09" alt="HTML Academy">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use>
               </svg>
 
@@ -256,7 +271,7 @@
         </div>
 
       </footer>
-    </main>
+
   </div>
   <script src="js/script.js "></script>
   <script src="js/picturefill.js"></script>

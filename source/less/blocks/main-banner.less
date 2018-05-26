@@ -11,7 +11,7 @@
     background-position: 50% bottom;
     background-size: auto, auto;
     z-index: -1;
-    &__intro-banner {
+    .main-banner__intro-banner {
         .space-reset();
         position: relative;
         top: 90px;
@@ -34,7 +34,7 @@
 @media(min-width: @screen-l-min) {
     .main-banner {
         background-color: #e4f1f9;
-        background : url("@{img-path}/bg-intro-triangle-tablet.svg") no-repeat,
+        background: url("@{img-path}/bg-intro-triangle-tablet.svg") no-repeat,
         url("@{img-path}/bg-back-desktop@1x.jpg") no-repeat;
         min-height: 518px;
         background-size: auto, auto;
@@ -69,7 +69,7 @@
         background-position: 50% bottom;
         @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
             background-color: #e4f1f9;
-            background : url("@{img-path}/bg-intro-triangle-desktop.svg")no-repeat,
+            background: url("@{img-path}/bg-intro-triangle-desktop.svg")no-repeat,
             url("@{img-path}/bg-back-desktop@2x.jpg") no-repeat;
             background-size: auto, 1200px 518px;
             background-position: 50% bottom;

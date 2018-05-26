@@ -8,22 +8,22 @@
     background-repeat: no-repeat;
     background-position: 50% bottom;
     background-size: auto, auto;
-    &__image {
-        display: block;
-        width: 230px;
-        text-align: center;
-        margin: 0 auto;
-        padding: 52px 0 0;
-        z-index: -1;
-    }
-    @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-color: #e4f1f9;
         background: url("@{img-path}/bg-intro-triangle-mobile.svg") no-repeat,
         url("@{img-path}/bg-back-mobile@2x.jpg") no-repeat;
         background-position: 50% bottom;
         background-size: auto, auto;
     }
+}
+
+.second-banner__image {
+    display: block;
+    width: 230px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 52px 0 0;
+    z-index: -1;
 }
 
 @media(min-width: @screen-l-min) {
@@ -34,18 +34,17 @@
         url("@{img-path}/bg-back-tablet@1x.jpg") no-repeat;
         background-size: auto, 1200px 518px;
         background-position: 50% bottom;
-        &__image {
-            width: 460px;
-            padding: 92px 0 0;
-        }
-        @media (min-resolution: @retina-dpi),
-        (min-resolution: @retina-dppx) {
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
             background-color: #e4f1f9;
             background: url("@{img-path}/bg-intro-triangle-tablet.svg") no-repeat,
             url("@{img-path}/bg-back-tablet@2x.jpg") no-repeat;
             background-size: auto, 1200px 518px;
             background-position: 50% bottom;
         }
+    }
+    .second-banner__image {
+        width: 460px;
+        padding: 92px 0 0;
     }
 }
 
@@ -57,16 +56,15 @@
         url("@{img-path}/bg-back-desktop@1x.jpg") no-repeat;
         background-size: auto, 1200px 518px;
         background-position: 50% bottom;
-        &__image {
-            padding: 100px 0;
-        }
-        @media (min-resolution: @retina-dpi),
-        (min-resolution: @retina-dppx) {
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
             background-color: #e4f1f9;
             background:url("@{img-path}/bg-intro-triangle-desktop.svg") no-repeat,
             url("@{img-path}/bg-back-desktop@2x.jpg") no-repeat;
             background-size: auto, 1200px 518px;
             background-position: 50% bottom;
         }
+    }
+    .second-banner__image {
+        padding: 100px 0;
     }
 }
