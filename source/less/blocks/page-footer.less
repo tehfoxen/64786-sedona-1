@@ -1,33 +1,120 @@
 .page-footer {
-  .space-reset();
-  background-color: @light-color;
-  &__wrapper {
+    .space-reset();
+    background-color: @light-color;
+}
+
+.page-footer__wrapper {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 35px 0;
     flex-direction: column;
-  }
+    align-items: center;
+    min-height: 230px;
+    margin: 0 20px;
+    padding: 37px 0;
+    padding-bottom: 0;
 }
 
 .hashtag a {
-  color: @light-dark;
-  font-weight: bold;
-  line-height: @title-line-height;
-  font-size: @base-line-height;
+    color: @light-dark;
+    font-weight: bold;
+    line-height: @title-line-height;
+    font-size: @base-line-height;
+}
+
+.hashtag {
+    margin-bottom: 37px;
+}
+
+.developer__text {
+    line-height: @title-line-height;
 }
 
 .developer {
-  &__text {
-    line-height: @title-line-height;
-  }
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.developer__link {
+    display: block;
+    width: 40px;
+    height: 48px;
+    margin-top: -5px;
+    padding-left: 17px;
+}
+
+.developer svg {
+    height: auto;
+    width: 27px;
+    height: 34px;
+}
+
+.developer svg {
+    &:hover {
+        fill: #81b3d2;
+    }
+}
+
+.developer__link svg {
+    &:active {
+        fill: #b2b2b2;
+    }
 }
 
 @media(min-width: @screen-l-min) {
-  .page-footer {
-    &__wrapper {
-      flex-direction: row;
-      flex-grow: 1;
+    .page-footer__wrapper {
+        flex-direction: row;
+        flex-grow: 1;
+        margin: 0 55px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: auto;
+        padding: 30px 0;
+        padding-bottom: 0;
     }
-  }
+    .hashtag {
+        margin-bottom: 37px;
+        margin-top: 0;
+    }
+    .developer__text {
+        line-height: 26px;
+        margin-bottom: 45px;
+        padding-top: 2px;
+        margin-top: 4px;
+    }
+    .developer svg {
+        padding-left: 18px;
+    }
+    .developer__link {
+        padding-left: 3px;
+        margin-top: 2px;
+    }
+    .page-footer__social {
+        margin-left: 11px;
+        margin-top: 5px;
+    }
+    .developer {
+        padding-left: 19px;
+    }
+}
+
+@media(min-width: @screen-xl-min) {
+    .page-footer__wrapper {
+        margin: 0 120px;
+    }
+    .developer__text {
+        margin-bottom: 40px;
+    }
+    .developer__link {
+        padding-left: 0;
+    }
+    .page-footer__social {
+        margin-left: 18px;
+    }
+    .developer svg {
+        padding-left: 14px;
+    }
+    .developer {
+        margin-top: -2px;
+    }
 }
