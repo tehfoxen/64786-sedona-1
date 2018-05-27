@@ -47,10 +47,10 @@
             </button>
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
-                <a href="index.html">Главная</a>
+                <a href="index.html" tabindex="1">Главная</a>
               </li>
               <li class="site-list__item">
-                <a href="photo.html">Фото и Видео</a>
+                <a href="photo.html" tabindex="2">Фото и Видео</a>
               </li>
               <li class="site-list__item  site-list__item--active">
                 <a>Форма отзыва</a>
@@ -60,7 +60,7 @@
               </li>
               <li class="site-list__item main-nav__item--logo">
 
-                <a href="index.html" class="page-header__logo">
+                <a href="index.html" class="page-header__logo" tabindex="4">
                   <picture>
                     <source media="(max-width: 767px)" srcset="img/logo-sedona-mobile.svg">
                     <source media="(max-width: 1279px)" srcset="img/logo-sedona-tablet.svg">
@@ -95,7 +95,7 @@
 
             <div class="text-box">
               <label class="main-info__text" for="firstname">Имя* </label>
-              <input class="text-box__input" type="text" placeholder="Петр" id="firstname" name="firstname">
+              <input class="text-box__input" type="text" tabindex="8" placeholder="Петр" id="firstname" name="firstname">
             </div>
 
           </div>
@@ -103,7 +103,7 @@
 
             <div class="text-box">
               <label class="main-info__text" for="lastname">Фамилия*</label>
-              <input class="text-box__input" type="text" placeholder="Иванов" id="lastname" name="lastname">
+              <input class="text-box__input" type="text" tabindex="9" placeholder="Иванов" id="lastname" name="lastname">
             </div>
 
           </div>
@@ -111,7 +111,7 @@
 
             <div class="text-box">
               <label class="main-info__text" for="midname">Отчество </label>
-              <input class="text-box__input" type="text" placeholder="Александрович" id="midname" name="midname">
+              <input class="text-box__input" type="text" tabindex="10" placeholder="Александрович" id="midname" name="midname">
             </div>
 
           </div>
@@ -126,7 +126,7 @@
               <div class="contact-info__box contact-info--icon">
 
 
-                <input class="contact-info__input " type="tel" placeholder="Введите телефон" name="phone" id="phone">
+                <input class="contact-info__input " type="tel" tabindex="11" placeholder="Введите телефон" name="phone" id="phone">
 
               </div>
             </div>
@@ -135,7 +135,7 @@
 
               <div class="contact-info__box contact-info--email">
 
-                <input class="contact-info__input contact-info__input--email" type="email" placeholder="Введите e-mail" name="email" id="email">
+                <input class="contact-info__input contact-info__input--email" type="email" tabindex="12" placeholder="Введите e-mail" name="email" id="email">
 
               </div>
             </div>
@@ -146,17 +146,17 @@
           <div class="toggle-set">
             <div class="toggle-set__item">
               <input class="toggle-set__input" type="radio" name="rating" id="value1" checked="">
-              <label class="toggle-set__text" for="value1">Скорее положительное</label>
+              <label class="toggle-set__text" tabindex="5" for="value1">Скорее положительное</label>
               <span class="toggle-set__checkbox"></span>
             </div>
             <div class="toggle-set__item">
               <input class="toggle-set__input" type="radio" name="rating" id="value2">
-              <label class="toggle-set__text" for="value2">Скорее отрицательное</label>
+              <label class="toggle-set__text" tabindex="6" for="value2">Скорее отрицательное</label>
               <span class="toggle-set__checkbox"></span>
             </div>
             <div class="toggle-set__item">
               <input class="toggle-set__input" type="radio" name="rating" id="value3">
-              <label class="toggle-set__text" for="value3">
+              <label class="toggle-set__text" tabindex="7" for="value3">
                 Затрудняюсь ответить</label>
               <span class="toggle-set__checkbox"></span>
             </div>
@@ -171,30 +171,30 @@
 
 
 
-              <label class="checked-set__text" for="checked1">Мост Дьявола</label>
+              <label class="checked-set__text" tabindex="13" for="checked1">Мост Дьявола</label>
 
             </div>
             <div class="checkbox-set__item">
               <input class="checked-set__input" type="checkbox" name="checked2" id="checked2" checked="">
 
-              <label class="checked-set__text" for="checked2">Гора-Колокол</label>
+              <label class="checked-set__text" tabindex="14" for="checked2">Гора-Колокол</label>
             </div>
             <div class="checkbox-set__item">
               <input class="checked-set__input" type="checkbox" name="checked3" id="checked3" checked="">
 
-              <label class="checked-set__text" for="checked3">Слайд-парк</label>
+              <label class="checked-set__text" tabindex="15" for="checked3">Слайд-парк</label>
             </div>
             <div class="checkbox-set__item">
               <input class="checked-set__input" type="checkbox" name="checked4" id="checked4">
 
-              <label class="checked-set__text" for="checked4">Красные скалы</label>
+              <label class="checked-set__text" tabindex="16" for="checked4">Красные скалы</label>
             </div>
           </div>
         </fieldset>
         <fieldset class="feedback__section fifth-section">
           <legend class="feedback__header feedback__header--fifth">Опишите свои эмоции:</legend>
           <div class="comment-info">
-            <textarea class="comment-info__write" name="write" id="write" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="comment-info__write" name="write" id="write" tabindex="17" placeholder="Опишите подробно все свои восторги"></textarea>
 
           </div>
         </fieldset>

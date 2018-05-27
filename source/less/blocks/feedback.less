@@ -68,6 +68,8 @@
     line-height: 26px;
     text-align: center;
     padding-right: 2px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .feedback__section--contacts {
@@ -78,8 +80,6 @@
     padding-left: 1px;
 }
 
-
-
 .feeddback__header--second {
     padding-left: 7px;
 }
@@ -88,22 +88,27 @@
     padding-top: 5px;
 }
 
+.comment-info__write:-moz-placeholder,
+.contact-info__input:-moz-placeholder,
+.text-box__input:-moz-placeholder {
+    color: #000;
+}
+
 .text-box__input::-webkit-input-placeholder,
 .contact-info__input::-webkit-input-placeholder,
-.comment-info__write::-webkit-input-placeholder,
-.text-box__input::-moz-placeholder,
-    {
+.comment-info__write::-webkit-input-placeholder {
     color: #000;
 }
 
 .feedback__header--fourth {
-    padding: 18px 20px;
     padding-bottom: 14px;
 }
 
 .feedback__header.feedback__header--fifth {
     padding-top: 18px;
     padding-bottom: 17px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .btn-search {
@@ -265,7 +270,6 @@
     .feeddback__header--second {
         width: 100%;
     }
-
     .feedback__header--fourth {
         font-size: 21px;
         line-height: 26px;
@@ -282,9 +286,7 @@
         align-items: center;
         padding-top: 64px;
         padding-bottom: 55px;
-
     }
-
     .btn-search {
         width: 50%;
         display: inline-block;
@@ -310,7 +312,6 @@
     .feedback__modal--success {
         top: 12%;
     }
-
     .feeddback__header--second::before,
     .feedback__header--fourth::before,
     .feedback__header--fifth::before {
@@ -401,14 +402,12 @@
     }
     .checkbox-set__item:nth-child(2) {
         padding-left: 15px;
-
     }
     .checkbox-set__item:nth-child(3) {
         padding-left: 27px;
     }
     .feedback__text {
         padding-left: 8px;
-
     }
     .feedback__header.feedback__header--fifth {
         padding-bottom: 55px;
@@ -418,7 +417,6 @@
     .comment-info__write {
         padding-top: 20px;
         padding-left: 22px;
-
     }
     .feedback__section:nth-child(6) {
         max-width: 100%;
@@ -440,11 +438,10 @@
         text-align: center;
     }
     .feedback__header--third {
-      padding-top: 55px;
-      text-align: left;
-  }
-  .feedback__section:nth-child(2) {
-    margin-top: 14px;
-}
-
+        padding-top: 55px;
+        text-align: left;
+    }
+    .feedback__section:nth-child(2) {
+        margin-top: 14px;
+    }
 }
