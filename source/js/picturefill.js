@@ -87,7 +87,7 @@
   var warn, eminpx, alwaysCheckWDescriptor, evalId;
   // local object for method references and testing exposure
   var pf = {};
-  var noop = function () { };
+  var noop = function () {};
   var image = document.createElement("img");
   var getImgAttr = image.getAttribute;
   var setImgAttr = image.setAttribute;
@@ -177,7 +177,7 @@
       c === "\u0009" || // horizontal tab
       c === "\u000A" || // new line
       c === "\u000C" || // form feed
-      c === "\u000D");  // carriage return
+      c === "\u000D"); // carriage return
   }
 
   /**
@@ -191,7 +191,9 @@
 
     var regLength = /^([\d\.]+)(em|vw|px)$/;
     var replace = function () {
-      var args = arguments, index = 0, string = args[0];
+      var args = arguments,
+        index = 0,
+        string = args[0];
       while (++index in args) {
         string = string.replace(args[index], args[++index]);
       }
@@ -233,7 +235,7 @@
           /*jshint evil:true */
           try {
             cssCache[css] = new Function("e", buildStr(css))(units);
-          } catch (e) { }
+          } catch (e) {}
           /*jshint evil:false */
         }
       }
@@ -294,8 +296,7 @@
     function (message) {
       console.warn(message);
     } :
-    noop
-    ;
+    noop;
 
   if (!(curSrcProp in image)) {
     curSrcProp = "src";
@@ -498,9 +499,9 @@
       candidates = [];
 
     /**
-    * Adds descriptor properties to a candidate, pushes to the candidates array
-    * @return undefined
-    */
+     * Adds descriptor properties to a candidate, pushes to the candidates array
+     * @return undefined
+     */
     // (Declared outside of the while loop so that it's only created once.
     // (This fn is defined before it is used, in order to pass JSHINT.
     // Unfortunately this breaks the sequencing of the spec comments. :/ )
@@ -531,12 +532,18 @@
         if (regexNonNegativeInteger.test(value) && (lastChar === "w")) {
 
           // If width and density are not both absent, then let error be yes.
-          if (w || d) { pError = true; }
+          if (w || d) {
+            pError = true;
+          }
 
           // Apply the rules for parsing non-negative integers to the descriptor.
           // If the result is zero, let error be yes.
           // Otherwise, let width be the result.
-          if (intVal === 0) { pError = true; } else { w = intVal; }
+          if (intVal === 0) {
+            pError = true;
+          } else {
+            w = intVal;
+          }
 
           // If the descriptor consists of a valid floating-point number followed by
           // a U+0078 LATIN SMALL LETTER X character
@@ -544,27 +551,41 @@
 
           // If width, density and future-compat-h are not all absent, then let error
           // be yes.
-          if (w || d || h) { pError = true; }
+          if (w || d || h) {
+            pError = true;
+          }
 
           // Apply the rules for parsing floating-point number values to the descriptor.
           // If the result is less than zero, let error be yes. Otherwise, let density
           // be the result.
-          if (floatVal < 0) { pError = true; } else { d = floatVal; }
+          if (floatVal < 0) {
+            pError = true;
+          } else {
+            d = floatVal;
+          }
 
           // If the descriptor consists of a valid non-negative integer followed by
           // a U+0068 LATIN SMALL LETTER H character
         } else if (regexNonNegativeInteger.test(value) && (lastChar === "h")) {
 
           // If height and density are not both absent, then let error be yes.
-          if (h || d) { pError = true; }
+          if (h || d) {
+            pError = true;
+          }
 
           // Apply the rules for parsing non-negative integers to the descriptor.
           // If the result is zero, let error be yes. Otherwise, let future-compat-h
           // be the result.
-          if (intVal === 0) { pError = true; } else { h = intVal; }
+          if (intVal === 0) {
+            pError = true;
+          } else {
+            h = intVal;
+          }
 
           // Anything else, Let error be yes.
-        } else { pError = true; }
+        } else {
+          pError = true;
+        }
       } // (close step 13 for loop)
 
       // 15. If error is still no, then append a new image source to candidates whose
@@ -573,11 +594,21 @@
       if (!pError) {
         candidate.url = url;
 
-        if (w) { candidate.w = w; }
-        if (d) { candidate.d = d; }
-        if (h) { candidate.h = h; }
-        if (!h && !d && !w) { candidate.d = 1; }
-        if (candidate.d === 1) { set.has1x = true; }
+        if (w) {
+          candidate.w = w;
+        }
+        if (d) {
+          candidate.d = d;
+        }
+        if (h) {
+          candidate.h = h;
+        }
+        if (!h && !d && !w) {
+          candidate.d = 1;
+        }
+        if (candidate.d === 1) {
+          set.has1x = true;
+        }
         candidate.set = set;
 
         candidates.push(candidate);
@@ -585,11 +616,11 @@
     } // (close parseDescriptors fn)
 
     /**
-    * Tokenizes descriptor properties prior to parsing
-    * Returns undefined.
-    * (Again, this fn is defined before it is used, in order to pass JSHINT.
-    * Unfortunately this breaks the logical sequencing of the spec comments. :/ )
-    */
+     * Tokenizes descriptor properties prior to parsing
+     * Returns undefined.
+     * (Again, this fn is defined before it is used, in order to pass JSHINT.
+     * Unfortunately this breaks the logical sequencing of the spec comments. :/ )
+     */
     function tokenize() {
 
       // 8.1. Descriptor tokeniser: Skip whitespace
@@ -880,12 +911,18 @@
     }
 
     function isValidNonNegativeSourceSizeValue(s) {
-      if (regexCssLengthWithUnits.test(s) && (parseFloat(s) >= 0)) { return true; }
-      if (regexCssCalc.test(s)) { return true; }
+      if (regexCssLengthWithUnits.test(s) && (parseFloat(s) >= 0)) {
+        return true;
+      }
+      if (regexCssCalc.test(s)) {
+        return true;
+      }
       // ( http://www.w3.org/TR/CSS2/syndata.html#numbers says:
       // "-0 is equivalent to 0 and is not a negative number." which means that
       // unitless zero and unitless negative zero must be accepted as special cases.)
-      if ((s === "0") || (s === "-0") || (s === "+0")) { return true; }
+      if ((s === "0") || (s === "-0") || (s === "+0")) {
+        return true;
+      }
       return false;
     }
 
@@ -1165,7 +1202,9 @@
   pf.setRes.res = setResolution;
 
   pf.applySetCandidate = function (candidates, img) {
-    if (!candidates.length) { return; }
+    if (!candidates.length) {
+      return;
+    }
     var candidate,
       i,
       j,
@@ -1481,7 +1520,9 @@
       } else {
         cfg[name] = args[0];
         if (alreadyRun) {
-          pf.fillImgs({ reselect: true });
+          pf.fillImgs({
+            reselect: true
+          });
         }
       }
     }
@@ -1500,7 +1541,9 @@
     module.exports = picturefill;
   } else if (typeof define === "function" && define.amd) {
     // AMD support
-    define("picturefill", function () { return picturefill; });
+    define("picturefill", function () {
+      return picturefill;
+    });
   }
 
   // IE8 evals this sync, so it must be the last thing we do
