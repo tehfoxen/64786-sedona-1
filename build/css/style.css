@@ -2517,7 +2517,7 @@ input[type="radio"]:focus + .toggle-set__text {
   display: -ms-flexbox;
   display: flex;
 }
-input[type="checkbox"]:focus + .checked-set__text::before {
+.checked-set__text:focus {
   outline: #3b99fc auto 5px;
 }
 .checked-set__text::before {
@@ -2533,9 +2533,6 @@ input[type="checkbox"]:focus + .checked-set__text::before {
 }
 .checked-set__input:checked + .checked-set__text::before {
   background: #f2f2f2 url("../img/icon-tick.svg") no-repeat 50% 50%;
-}
-.checked-set__input:checked + .checked-set__text:active::before {
-  background: #d5d5d5;
 }
 @media (min-width: 768px) {
   .checkbox-set__item {
