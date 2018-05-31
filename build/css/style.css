@@ -38,9 +38,6 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.page-main {
-  background: #ffffff;
-}
 .container {
   -webkit-box-shadow: 0 0 30px -4px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 30px -4px rgba(0, 0, 0, 0.6);
@@ -1573,6 +1570,10 @@ img {
     font-size: 21px;
     line-height: 26px;
   }
+  .feedback__header.feedback__header--first {
+    position: relative;
+    right: 41px;
+  }
 }
 @media (min-width: 1200px) {
   .feedback__form {
@@ -1651,8 +1652,13 @@ img {
     text-align: center;
   }
   .feedback__header.feedback__header--third {
-    margin-left: 80px;
     text-align: center;
+    position: relative;
+    right: 15px;
+  }
+  .feedback__header.feedback__header--first {
+    position: relative;
+    right: 0;
   }
   .feedback__header--third {
     padding-top: 55px;
@@ -2179,7 +2185,6 @@ img {
 }
 .toggle-set__text {
   display: inline-block;
-  position: relative;
   vertical-align: middle;
   width: 200px;
   padding-left: 80px;
@@ -2198,8 +2203,7 @@ img {
 .toggle-set__item:active {
   background-color: #d5d5d5;
 }
-.toggle-set__input:checked ~ .toggle-set__checkbox:active::before {
-  content: "";
+.toggle-set__input:checked ~ .toggle-set__text:active::before {
   background-color: #a4a4a4;
 }
 .toggle-set__item input[type="checkbox"],
@@ -2220,7 +2224,7 @@ input[type="radio"] {
   background-color: #f2f2f2;
   cursor: pointer;
 }
-.toggle-set__input:checked ~ .toggle-set__checkbox::before {
+.toggle-set__input:checked ~ .toggle-set__text::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2233,6 +2237,9 @@ input[type="radio"] {
   border-radius: 50%;
   background-color: #000000;
   cursor: pointer;
+}
+input[type="radio"]:focus + .toggle-set__text {
+  outline: #3b99fc auto 5px;
 }
 @media (min-width: 768px) {
   .toggle-set {
@@ -2263,16 +2270,16 @@ input[type="radio"] {
   margin-bottom: 11px;
 }
 .contact-info {
-  width: 100%;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto;
-  margin-bottom: 18px;
-  padding-bottom: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
 }
 .contact-info__box {
   display: -webkit-box;
@@ -2343,7 +2350,7 @@ input[type="radio"] {
     margin-top: 2px;
   }
   .contact-info__input {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px;
   }
 }
@@ -2432,7 +2439,7 @@ input[type="radio"] {
     margin-right: 32px;
     padding-top: 1px;
     margin-left: 19px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px;
   }
 }
@@ -2503,9 +2510,6 @@ input[type="radio"] {
 .checked-set__input:checked + .checked-set__text:hover::before {
   background-color: #e5e5e5;
 }
-.checked-set__input:checked + .checked-set__text:active::before {
-  background-color: #d5d5d5;
-}
 .checkbox-set__item {
   width: 100%;
   padding-bottom: 22px;
@@ -2513,7 +2517,7 @@ input[type="radio"] {
   display: -ms-flexbox;
   display: flex;
 }
-.checkbox input[type="checkbox"]:focus + .checked-set__text::before {
+input[type="checkbox"]:focus + .checked-set__text::before {
   outline: #3b99fc auto 5px;
 }
 .checked-set__text::before {
@@ -2529,6 +2533,9 @@ input[type="radio"] {
 }
 .checked-set__input:checked + .checked-set__text::before {
   background: #f2f2f2 url("../img/icon-tick.svg") no-repeat 50% 50%;
+}
+.checked-set__input:checked + .checked-set__text:active::before {
+  background: #d5d5d5;
 }
 @media (min-width: 768px) {
   .checkbox-set__item {
@@ -2551,15 +2558,6 @@ input[type="radio"] {
     text-align: left;
     color: #000000;
     text-transform: none;
-  }
-  .checked-set__input:checked + .checked-set__text:hover::before {
-    background-color: #e5e5e5;
-  }
-  .checked-set__input:checked + .checked-set__text:active::before {
-    background-color: #d5d5d5;
-  }
-  .checkbox input[type="checkbox"]:focus + .checked-set__text::before {
-    outline: #3b99fc auto 5px;
   }
   .checked-set__text::before {
     content: "";

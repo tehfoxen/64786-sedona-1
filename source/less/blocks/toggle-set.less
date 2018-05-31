@@ -4,7 +4,6 @@
 
 .toggle-set__text {
   display: inline-block;
-  position: relative;
   vertical-align: middle;
   width: 200px;
   padding-left: 80px;
@@ -26,8 +25,7 @@
   background-color: #d5d5d5;
 }
 
-.toggle-set__input:checked ~ .toggle-set__checkbox:active::before {
-  content: "";
+.toggle-set__input:checked ~ .toggle-set__text:active::before {
   background-color: #a4a4a4;
 }
 
@@ -50,7 +48,7 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-.toggle-set__input:checked ~ .toggle-set__checkbox::before {
+.toggle-set__input:checked ~ .toggle-set__text::before {
   content: "";
   position: absolute;
   top: 0;
@@ -63,6 +61,10 @@ input[type="radio"] {
   border-radius: 50%;
   background-color: #000000;
   cursor: pointer;
+}
+
+input[type="radio"]:focus + .toggle-set__text {
+  outline: rgb(59, 153, 252) auto 5px;
 }
 
 @media (min-width: @screen-l-min) {
