@@ -2531,6 +2531,10 @@ input[type="radio"]:focus + .toggle-set__text {
   cursor: pointer;
   margin-right: 25px;
 }
+.checked-set__text:active::before {
+  background-color: #DBDBDB;
+  opacity: 0.45;
+}
 .checked-set__input:checked + .checked-set__text::before {
   background: #f2f2f2 url("../img/icon-tick.svg") no-repeat 50% 50%;
 }
